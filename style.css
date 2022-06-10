@@ -58,15 +58,14 @@ button:active::after,
     top: var(--y);
     left: var(--x);
     z-index: -1;
-    animation: pulse 100ms ease-in forwards;
 }
 
 button:active::after {
-    animation-duration: 600ms;
+    animation: pulse 800ms ease-in-out forwards;
 }
 
 .pulse::after {
-    animation-duration: 450ms;
+    animation: pulse 400ms ease-in forwards;
 }
 
 
