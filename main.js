@@ -1,6 +1,6 @@
 const btn = document.querySelector('button');
 
-btn.addEventListener('click', (e) => {
+btn.addEventListener('mousedown', (e) => {
    const posX = e.offsetX;
    const posY = e.offsetY;
 

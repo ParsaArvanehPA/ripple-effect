@@ -45,17 +45,27 @@ button::after {
     width: 200%;
     aspect-ratio: 1 / 1;
 
-    border-radius: 50%;
-    background: radial-gradient(hsla(0, 0%, 100%, 20%), transparent);
+    border-radius: 100%;
+    background: radial-gradient(hsla(0, 0%, 100%, 15%), transparent);
 }
 
+button:active::after,
 .pulse::after {
     position: absolute;
     top: var(--y);
     left: var(--x);
-
-    animation: pulse 500ms linear;
+    z-index: -1;
+    animation: pulse 100ms ease-in-out forwards;
 }
+
+button:active::after {
+    animation-duration: 600ms;
+}
+
+.pulse::after {
+    animation-duration: 375ms;
+}
+
 
 @keyframes pulse {
     from {
